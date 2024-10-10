@@ -52,7 +52,7 @@ O projeto está sendo desenvolvido utilizando as seguintes tecnologias:
 - **Versionamento de Código**: Git/GitHub para controle de versão e colaboração
 - **React**: framework para a interface
 - **Axios**: para consumir a API's REST
-- **Bootstrap**: parPara estilização e responsividade
+- **Bootstrap**: Para estilização e responsividade
 - **React Router**: Para navegação entre páginas
 
 
