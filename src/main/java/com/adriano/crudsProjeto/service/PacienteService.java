@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PacienteService {
@@ -34,14 +35,13 @@ public class PacienteService {
         );
     }
     //update paciente
-    public PacienteDTO updatePaciente(long idOldPaciente, PacienteDTO paciente) {
+    public PacienteDTO updatePaciente(long id, PacienteDTO paciente) {
         var newPaciente = DozerConverter.parseObject(paciente, Paciente.class);
-        Paciente oldPaciente = repository.findById(idOldPaciente).get();
-        oldPaciente.setId(newPaciente.getId());
+        Paciente oldPaciente = repository.findById(id).get();
         oldPaciente.setName(newPaciente.getName());
         oldPaciente.setAdress(newPaciente.getAdress());
         oldPaciente.setContact(newPaciente.getContact());
-        oldPaciente.setCpf(newPaciente.getCpf());
+        oldPaciente.setBirthDate(newPaciente.getBirthDate());
         repository.save(oldPaciente);
         return DozerConverter.parseObject(oldPaciente, PacienteDTO.class);
     }
@@ -49,6 +49,12 @@ public class PacienteService {
     //delete Paciente
     public void deletePaciente(long id){
         repository.deleteById(id);
+    }
+
+    //pesquisando por um paciente baseado no ID dele
+    public PacienteDTO findPaciente(long id){
+        Paciente paciente = repository.findById(id).get();
+        return DozerConverter.parseObject(paciente, PacienteDTO.class);
     }
 
 }

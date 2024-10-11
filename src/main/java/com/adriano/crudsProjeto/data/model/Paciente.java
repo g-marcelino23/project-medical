@@ -17,12 +17,11 @@ public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
     @Column(nullable = false, length = 11)
     private String cpf;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    private LocalDate bithDate;
+    private LocalDate birthDate;
     private String adress;
     @Column(length = 11)
     private String contact;

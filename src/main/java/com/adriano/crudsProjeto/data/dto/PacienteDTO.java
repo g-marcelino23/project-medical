@@ -8,7 +8,7 @@ import java.util.Date;
 @Data
 public class PacienteDTO {
     //SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    private Long id;
+    private long id;
     private String name;
     private String cpf;
     private LocalDate birthDate;
