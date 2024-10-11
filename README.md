@@ -1,58 +1,73 @@
-# Sistema de Gestão de Consultório Médico
+# 🏥 Sistema de Gestão de Consultório Médico
 
-## Descrição do Projeto
-O **Sistema de Gestão de Consultório Médico** tem como objetivo automatizar e simplificar a administração de um consultório médico, permitindo o gerenciamento eficiente de **pacientes**, **médicos**, **consultas**, **exames** e **agendamentos**. A aplicação também inclui uma funcionalidade extra de **envio automático de lembretes** para os pacientes sobre suas consultas agendadas.
+## 📋 Descrição do Projeto
 
-Atualmente, o projeto está em andamento e novas funcionalidades estão sendo implementadas.
+O **Sistema de Gestão de Consultório Médico** é uma aplicação web completa, desenvolvida para automatizar e facilitar as operações diárias de uma clínica médica. A aplicação permite o **gerenciamento de consultas**, **prontuários**, **pacientes** e **médicos**, além de uma funcionalidade extra que automatiza o envio de **lembretes de consultas**. Esse projeto é ideal para clínicas de pequeno a médio porte que desejam melhorar a eficiência do atendimento e a organização administrativa.
 
-## Funcionalidades Principais
-O sistema inclui as seguintes funcionalidades principais:
+### Funcionalidades Principais:
+- 📅 **Gerenciamento de Agendamentos**: Médicos podem gerenciar suas consultas de forma eficiente, visualizando dias disponíveis e ocupados.
+- 👩‍⚕️ **Gestão de Pacientes e Médicos**: Cadastro completo e gerenciável de pacientes e médicos.
+- 🗒️ **Prontuários Eletrônicos**: Cada paciente tem seu prontuário digital atualizado com histórico de consultas e tratamentos.
+- 💬 **Envio de Lembretes Automáticos**: O sistema envia lembretes automáticos de consultas para os pacientes.
+- 📊 **Relatórios**: Geração de relatórios financeiros e administrativos da clínica.
 
-1. **Cadastro e Gerenciamento de Pacientes**: Permite o cadastro, edição, visualização e exclusão dos dados dos pacientes, como nome, CPF, data de nascimento, telefone e endereço.
-   
-2. **Cadastro e Gerenciamento de Médicos**: Permite o cadastro e manutenção dos dados dos médicos, como nome, CRM, especialidade e telefone.
+## 🚀 Status do Projeto
+<p align="center">
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
 
-3. **Agendamento de Consultas**: 
-   - Possibilita a marcação de consultas entre pacientes e médicos, verificando a disponibilidade do médico em horários específicos.
-   - Se o horário solicitado estiver indisponível, o sistema sugere dias alternativos no mês atual em que o médico tem disponibilidade.
-   
-4. **Gestão de Exames**: Cadastro e gerenciamento dos exames realizados, associados a uma consulta específica. Inclui o registro do nome do exame, data de realização e resultado.
+**Em andamento**. Atualmente, o back-end já está em desenvolvimento, e o front-end será integrado ao longo do processo.
+---
 
-5. **Agenda de Consultas**: Exibição dos horários disponíveis e ocupados para cada médico, com possibilidade de marcar, editar ou cancelar consultas.
+## 💻 Tecnologias Utilizadas
 
-6. **Funcionalidade Extra - Envio Automático de Lembretes**:
-   - O sistema envia **lembretes automáticos** por e-mail ou SMS para os pacientes 24 horas antes de suas consultas.
-   - Esse processo é gerenciado por uma rotina agendada (Scheduler), que verifica diariamente as consultas marcadas para o próximo dia e dispara os lembretes.
-   - A implementação desta funcionalidade tem como objetivo reduzir faltas e garantir que os pacientes estejam cientes de suas consultas.
+### Backend 🖥️
 
-## Funcionamento do Sistema
+Para o desenvolvimento do back-end, utilizamos tecnologias robustas e escaláveis, garantindo a performance e a segurança da aplicação.
 
-- **Paciente seleciona um horário**: O paciente pode ver os horários disponíveis de um médico e marcar uma consulta. Caso o horário esteja ocupado, o sistema sugere alternativas dentro do mesmo mês.
-  
-- **Consulta confirmada**: Após a confirmação da consulta, o sistema salva as informações no banco de dados e atualiza a agenda do médico.
-  
-- **Envio de lembrete**: Automaticamente, 24 horas antes da consulta, o paciente recebe um lembrete por e-mail ou SMS com os detalhes da consulta.
-  
-- **Gerenciamento de consultas e exames**: O consultório pode gerenciar a agenda e os exames realizados, mantendo um histórico de atendimento.
+- **Java Spring Boot**: Framework utilizado para a criação do back-end, responsável pelas APIs e lógica de negócios do sistema.
+- **Spring Data JPA**: Para o mapeamento objeto-relacional e operações no banco de dados.
+- **Hibernate**: Implementação do JPA para gerenciar a persistência de dados.
+- **PostgreSQL**: Banco de dados relacional para armazenar os dados da aplicação.
+- **Swagger**: Documentação automática das APIs RESTful.
+- **JWT (JSON Web Token)**: Para a autenticação e autorização de usuários.
+- **Lombok**: Biblioteca que ajuda na simplificação do código, reduzindo o boilerplate.
+- **Maven**: Gerenciador de dependências e construção do projeto.
 
-## Tecnologias Utilizadas
+### Frontend 🌐
 
-O projeto está sendo desenvolvido utilizando as seguintes tecnologias:
+No front-end, utilizamos **Angular**, um dos frameworks mais populares e eficientes para o desenvolvimento de interfaces ricas e responsivas.
 
-- **Linguagem**: Java
-- **Framework de Backend**: Spring Boot
-- **Spring Data JPA** para integração com banco de dados
-- **Spring MVC** para roteamento e controle das requisições
-- **Spring Security** (a ser implementado) para autenticação e controle de acesso
-- **Spring Scheduler** para agendamento de tarefas (envio de lembretes)
-- **Banco de Dados**: PostgreSQL, gerenciado via **JPA** e com **Migrations** utilizando Flyway
-- **Documentação da API**: Swagger para documentar todas as rotas e endpoints
-- **Ferramentas de Notificação**: Integração com APIs de envio de SMS (como **Twilio**) para os lembretes automáticos
-- **Gerenciamento de Dependências**: Maven
-- **Versionamento de Código**: Git/GitHub para controle de versão e colaboração
-- **React**: framework para a interface
-- **Axios**: para consumir a API's REST
-- **Bootstrap**: Para estilização e responsividade
-- **React Router**: Para navegação entre páginas
+- **Angular**: Framework front-end baseado em TypeScript para o desenvolvimento de SPA (Single Page Applications).
+- **HTML5/CSS3**: Para a estruturação e estilização das páginas web.
+- **TypeScript**: Superconjunto de JavaScript que fornece tipagem estática opcional.
+- **Bootstrap**: Framework de CSS para criar interfaces responsivas e atraentes.
+- **Axios**: Para fazer requisições HTTP entre o front-end e o back-end.
+- **Formulários Reativos (Reactive Forms)**: Implementação de formulários dinâmicos e com validação robusta em Angular.
 
+---
+
+## 🛠️ Funcionalidades do Sistema
+
+### 📅 Gerenciamento de Consultas
+- Médicos podem visualizar suas agendas diárias, selecionar horários disponíveis e bloquear horários quando necessário.
+- Pacientes podem escolher o médico e o horário para sua consulta, com feedback em tempo real sobre a disponibilidade.
+
+### 🗒️ Gestão de Prontuários Médicos
+- Cada paciente tem seu prontuário digitalizado, que contém todo o histórico de consultas, tratamentos e anotações do médico.
+- Médicos podem atualizar prontuários e visualizar informações passadas rapidamente.
+
+### 📧 Lembretes Automáticos
+- O sistema envia lembretes automáticos para os pacientes via email ou SMS, informando-os sobre consultas próximas.
+
+---
+## 🛡️ Autenticação e Segurança
+
+O sistema conta com autenticação e autorização baseada em **JWT** (JSON Web Token), garantindo que apenas usuários autenticados possam acessar determinadas rotas e funcionalidades do sistema.
+
+---
+
+## 🧑‍💻 Contribuidores
+
+- **Gabriel Marcelino e Rodrigo Queiroz** 
 
