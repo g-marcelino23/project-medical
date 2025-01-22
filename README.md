@@ -12,9 +12,8 @@ O **Sistema de Gestão de Consultório Médico** é uma aplicação web completa
 - 📊 **Relatórios**: Geração de relatórios financeiros e administrativos da clínica.
 
 ## 🚀 Status do Projeto
-<p align="center">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
-</p>
+
+FINALIZADO
 
 **Em andamento**. Atualmente, o back-end já está em desenvolvimento, e o front-end será integrado ao longo do processo.
 ---
